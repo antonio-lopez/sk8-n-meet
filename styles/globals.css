@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/fonts/NunitoSans-Bold.ttf');
+  src: url('/fonts/NunitoSans-SemiBold.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PassionOne';
+  src: url('/fonts/PassionOne-Black.ttf');
+  src: url('/fonts/PassionOne-Bold.ttf');
+  src: url('/fonts/PassionOne-Regular.ttf');
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    font-family: 'Nunito Sans';
+    scroll-behavior: smooth;
+    background-color: #242629;
+  }
+
+  h1 {
+    font-family: 'PassionOne';
+  }
+
+  .layout {
+    max-width: 80rem;
+    @apply mx-auto w-11/12;
+  }
+
+  .min-h-main {
+    @apply min-h-[calc(100vh-82px)];
+  }
+}
