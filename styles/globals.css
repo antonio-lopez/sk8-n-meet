@@ -21,10 +21,11 @@
   html {
     font-family: 'Nunito Sans';
     scroll-behavior: smooth;
-    background-color: #242629;
+    background-color: #000000;
   }
 
-  h1 {
+  h1,
+  a {
     font-family: 'PassionOne';
   }
 
