@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaTiktok, FaInstagram, FaSpotify } from 'react-icons/fa';
+import { BiMenuAltRight } from 'react-icons/bi';
 
 interface Link {
   id: number;
@@ -53,8 +54,18 @@ const Navbar = () => {
             />
           </div>
         </Link>
-        {/* home and social media links */}
-        <div className='flex items-center space-x-10'>
+
+        {/* mobile navbar  */}
+        <button
+          type='button'
+          aria-label='open mobile menu'
+          className='md:hidden'
+        >
+          <BiMenuAltRight aria-hidden='true' className='h-12 w-12' />
+        </button>
+
+        {/* desktop navbar */}
+        <div className='hidden md:flex items-center space-x-10'>
           <div>
             <ul className='flex space-x-4'>
               {linkArray.map((link) => {
@@ -67,9 +78,30 @@ const Navbar = () => {
             </ul>
           </div>
           <div className='flex items-center justify-center space-x-4'>
-            <FaInstagram className='h-6 w-6 hover:text-yellowGreen' />
-            <FaTiktok className='h-6 w-6 hover:text-yellowGreen' />
-            <FaSpotify className='h-6 w-6 hover:text-yellowGreen' />
+            <a
+              href='https://www.instagram.com/sk8_n_meet_santana/?igshid=YmMyMTA2M2Y%3D'
+              aria-label='instagram profile link'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FaInstagram className='h-6 w-6 hover:text-yellowGreen' />
+            </a>
+            <a
+              href='https://www.tiktok.com/@sk8_n_meet_santana'
+              aria-label='tiktok profile link'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FaTiktok className='h-6 w-6 hover:text-yellowGreen' />
+            </a>
+            <a
+              href='https://open.spotify.com/user/31ryffk7oynp2rjj5zf6zj7taj7u?si=3044d10a38b24ef8'
+              aria-label='spotify profile link'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FaSpotify className='h-6 w-6 hover:text-yellowGreen' />
+            </a>
           </div>
         </div>
       </div>
