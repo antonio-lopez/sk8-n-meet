@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        smokyBlack: '#121212',
+        smokyBlack: '#16161a',
         eerieBlack: '#212121',
         yellowGreen: '#AAD33C',
         nadeshikoPink: '#F3AECA',
