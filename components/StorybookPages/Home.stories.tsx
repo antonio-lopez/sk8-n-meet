@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Primary as Layout } from '../Layout/Layout.stories';
 import { Primary as Hero } from '../Home/Hero.stories';
+import { Primary as HomeFlyers } from '../Home/HomeFlyers.stories';
 import React from 'react';
 
 export default {
@@ -11,5 +12,6 @@ export default {
 export const Page: ComponentStory<typeof React.Component> = () => (
   <Layout {...Layout.args}>
     <Hero />
+    <HomeFlyers />
   </Layout>
 );
