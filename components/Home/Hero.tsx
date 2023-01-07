@@ -8,7 +8,7 @@ const Hero = () => {
         <div className='w-full'>
           <Gallery />
         </div>
-        <div className='relative row-start-1 lg:col-start-2'>
+        <div className='relative'>
           <Image
             src='https://res.cloudinary.com/dloisor1x/image/upload/v1672271664/santa-ana-sk8nmeet/logos/Sk8_n_meet-_Santa_Ana_logo_ot8d2y.png'
             alt='company logo'
@@ -18,11 +18,12 @@ const Hero = () => {
               (max-width: 1200px) 50vw,
               33vw'
             priority
+            className='lg:p-14 self-center'
           />
         </div>
       </div>
-      <span className='text-nadeshikoPink block font-[PassionOne] py-4 font-black text-2xl md:text-5xl text-center lg:text-left'>
-        Find your sk8 community here
+      <span className='text-nadeshikoPink block font-["Erica_One"] py-4 text-2xl md:text-4xl text-left lg:text-left'>
+        Find your sk8 community here...
       </span>
     </section>
   );

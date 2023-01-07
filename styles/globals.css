@@ -3,30 +3,27 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Nunito Sans';
-  src: url('/fonts/NunitoSans-Bold.ttf');
-  src: url('/fonts/NunitoSans-SemiBold.ttf');
+  font-family: 'Erica One';
+  src: url('/fonts/EricaOne-Regular.ttf');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'PassionOne';
-  src: url('/fonts/PassionOne-Black.ttf');
-  src: url('/fonts/PassionOne-Bold.ttf');
-  src: url('/fonts/PassionOne-Regular.ttf');
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf');
   font-display: swap;
 }
 
 @layer base {
   html {
-    font-family: 'Nunito Sans';
+    font-family: 'Poppins';
     scroll-behavior: smooth;
     background-color: #000000;
   }
 
   h1,
   a {
-    font-family: 'PassionOne';
+    font-family: 'Erica One';
   }
 
   .layout {
