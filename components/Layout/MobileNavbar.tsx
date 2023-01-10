@@ -45,7 +45,7 @@ const mobileLinks: Array<NavbarLink> = [
   },
 ];
 
-const MobileNavbar = () => {
+const MobileNavbar = (props: { onClick: () => void }) => {
   return (
     <div className='text-yellowGreen mt-8 text-3xl text-center'>
       {/* mobile links */}
@@ -53,7 +53,9 @@ const MobileNavbar = () => {
         {mobileLinks.map((link) => {
           return (
             <li key={link.id}>
-              <Link href={link.route}>{link.routeName}</Link>
+              <Link onClick={props.onClick} href={link.route}>
+                {link.routeName}
+              </Link>
             </li>
           );
         })}

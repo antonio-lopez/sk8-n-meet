@@ -75,7 +75,7 @@ const linksWithSublinks: NavbarLinksWithSubLinks = [
 ];
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<Boolean>(false);
 
   return (
     <nav className='bg-smokyBlack text-white h-20'>
@@ -134,7 +134,9 @@ const Navbar = () => {
               </button>
             </div>
             <Suspense fallback={null}>
-              <LazyLoadMobileNavbar />
+              <LazyLoadMobileNavbar
+                onClick={() => setIsOpen((open) => !open)}
+              />
             </Suspense>
           </div>
         </div>
