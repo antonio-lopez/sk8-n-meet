@@ -1,6 +1,6 @@
 import Flyer from '../Cards/Flyer';
 
-const MeetUpDetails = () => {
+const NextMeetUpDetails = () => {
   return (
     <section className='mb-10'>
       <div className='grid grid-cols-1 place-items-center gap-y-6'>
@@ -19,4 +19,4 @@ const MeetUpDetails = () => {
   );
 };
 
-export default MeetUpDetails;
+export default NextMeetUpDetails;
