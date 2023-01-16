@@ -30,16 +30,6 @@ const mobileLinks: Array<NavbarLink> = [
   },
   {
     id: 5,
-    route: '/donations',
-    routeName: 'Donations',
-  },
-  {
-    id: 6,
-    route: '/volunteer',
-    routeName: 'Volunteer',
-  },
-  {
-    id: 7,
     route: '/contact',
     routeName: 'Contact',
   },

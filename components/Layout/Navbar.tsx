@@ -55,23 +55,6 @@ const linksWithSublinks: NavbarLinksWithSubLinks = [
       },
     ],
   },
-  {
-    id: 2,
-    routeName: 'Get Involved',
-    route: '/volunteer',
-    subLinks: [
-      {
-        id: 0,
-        route: '/donations',
-        routeName: 'Donations',
-      },
-      {
-        id: 1,
-        route: '/volunteer',
-        routeName: 'Volunteer',
-      },
-    ],
-  },
 ];
 
 const Navbar = () => {
