@@ -11,7 +11,7 @@ const MeetUpDetails = () => {
             alt='flyer cover'
           />
         </div>
-        <p className='text-slimSilver'>
+        <p className='text-slimSilver indent-8'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc
           faucibus a pellentesque sit amet porttitor eget dolor. At risus

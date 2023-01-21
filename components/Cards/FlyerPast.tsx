@@ -22,7 +22,7 @@ const FlyerPast = ({ image, alt, eventDate }: Props) => {
               33vw'
         />
       </div>
-      <p className='text-nadeshikoPink text-center text-2xl pt-4 font-["Erica_One"]'>
+      <p className='text-white text-center text-2xl pt-4 font-["Erica_One"]'>
         {eventDate}
       </p>
     </div>

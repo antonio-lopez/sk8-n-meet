@@ -18,7 +18,7 @@ const Mission = () => {
         />
       </div>
 
-      <div className='flex flex-wrap space-x-3 text-slimSilver items-center font-["Erica_One"] text-lg py-8 md:text-3xl justify-center lg:py-14'>
+      <div className='flex flex-wrap space-x-3 text-white items-center font-["Erica_One"] text-lg py-8 md:text-3xl justify-center lg:py-14'>
         <span>Community</span>
         <span>•</span>
         <span>Friendship</span>

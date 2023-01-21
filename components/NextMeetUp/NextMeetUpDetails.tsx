@@ -11,7 +11,7 @@ const NextMeetUpDetails = () => {
             alt='flyer cover'
           />
         </div>
-        <p className='text-white font-["Erica_One"] text-4xl md:text-5xl'>
+        <p className='text-white font-["Erica_One"] text-3xl md:text-4xl'>
           Save the date!
         </p>
       </div>

@@ -3,11 +3,11 @@ import Image from 'next/image';
 const AboutBlurb = () => {
   return (
     <section className='text-white pb-10'>
-      <div className='grid grid-cols-1 md:gap-y-6'>
+      <div className='grid grid-cols-1 md:gap-y-16'>
         <div className='relative h-72'>
           <Image
-            src='https://res.cloudinary.com/dloisor1x/image/upload/v1672271664/santa-ana-sk8nmeet/logos/Sk8_n_meet-_Santa_Ana_logo_ot8d2y.png'
-            alt='company logo'
+            src='https://res.cloudinary.com/dloisor1x/image/upload/v1674152525/santa-ana-sk8nmeet/bio-images/IMG_0171_uarmts.webp'
+            alt='members biography cover'
             fill
             style={{ objectFit: 'contain' }}
             sizes='(max-width: 768px) 100vw,

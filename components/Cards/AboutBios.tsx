@@ -7,19 +7,19 @@ const AboutBios = () => {
       <div className='grid grid-cols-1 lg:grid-cols-[288px,_1fr] my-14 gap-5'>
         <div className='relative h-96'>
           <Image
-            src='https://images.unsplash.com/photo-1618225747659-433d5a5c6af7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80'
-            alt='placeholder'
+            src='https://res.cloudinary.com/dloisor1x/image/upload/v1674152520/santa-ana-sk8nmeet/bio-images/IMG_0073_u8eslv.webp'
+            alt='angela biography cover'
             fill
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'cover', objectPosition: '25% 25%' }}
             sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
           />
         </div>
         <div className='w-full'>
-          <h1 className='text-nadeshikoPink text-center lg:text-left text-3xl md:text-4xl mb-5'>
+          <h2 className='text-nadeshikoPink text-center lg:text-left text-3xl md:text-4xl mb-5'>
             Angela
-          </h1>
+          </h2>
           <p className='text-slimSilver'>
             Angela is a recent graduate with a Bachelor’s degree in chemical
             engineering. She is currently studying to get her Master’s in Food
@@ -47,8 +47,9 @@ const AboutBios = () => {
       <div className='grid grid-cols-1 lg:grid-cols-[1fr,_288px] my-14 gap-5'>
         <div className='relative h-96'>
           <Image
-            src='https://images.unsplash.com/photo-1618225747659-433d5a5c6af7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80'
-            alt='placeholder'
+            src='https://res.cloudinary.com/dloisor1x/image/upload/v1674152525/santa-ana-sk8nmeet/bio-images/IMG_0111_lbc5v5.webp'
+            alt='ashley biography cover'
+            className='object-right'
             fill
             style={{ objectFit: 'cover' }}
             sizes='(max-width: 768px) 100vw,
@@ -57,9 +58,9 @@ const AboutBios = () => {
           />
         </div>
         <div className='lg:row-start-1'>
-          <h1 className='text-nadeshikoPink text-center lg:text-left text-3xl md:text-4xl mb-5'>
+          <h2 className='text-nadeshikoPink text-center lg:text-left text-3xl md:text-4xl mb-5'>
             Ashley
-          </h1>
+          </h2>
           <p className='text-slimSilver'>
             Ashley is an eclectic artist within multiple realms of the creative
             scope. After graduating from FIDM (Fashion Institute of Design and
