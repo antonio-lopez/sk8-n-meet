@@ -6,8 +6,8 @@ const Gallery = () => {
       {/* first row */}
       <div className='relative'>
         <Image
-          src='https://images.unsplash.com/photo-1612949044356-9bd612f5fbe6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80'
-          alt='placeholder'
+          src='https://res.cloudinary.com/dloisor1x/image/upload/v1675544705/santa-ana-sk8nmeet/homepage/IMG_1930_Original_wrsykc.webp'
+          alt='skate meeting gallery one'
           fill
           style={{ objectFit: 'cover' }}
           className='rounded-xl'
@@ -18,8 +18,8 @@ const Gallery = () => {
       </div>
       <div className='relative'>
         <Image
-          src='https://images.unsplash.com/photo-1622893862979-176ff88a68f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80'
-          alt='placeholder'
+          src='https://res.cloudinary.com/dloisor1x/image/upload/v1675544705/santa-ana-sk8nmeet/homepage/20230122_153203_wxas28.webp'
+          alt='skate meeting gallery two'
           fill
           style={{ objectFit: 'cover' }}
           className='rounded-xl'
@@ -30,8 +30,8 @@ const Gallery = () => {
       </div>
       <div className='relative col-span-2'>
         <Image
-          src='https://images.unsplash.com/photo-1613084551663-e596c62cdbdb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'
-          alt='placeholder'
+          src='https://res.cloudinary.com/dloisor1x/image/upload/v1675544705/santa-ana-sk8nmeet/homepage/20220617083522_IMG_8918_fwxf5y.webp'
+          alt='skate meeting gallery three'
           fill
           style={{ objectFit: 'cover' }}
           className='rounded-xl'
@@ -44,8 +44,8 @@ const Gallery = () => {
       {/* second row */}
       <div className='relative col-span-2'>
         <Image
-          src='https://images.unsplash.com/photo-1571987936987-ffaa42bb1742?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'
-          alt='placeholder'
+          src='https://res.cloudinary.com/dloisor1x/image/upload/v1675544706/santa-ana-sk8nmeet/homepage/20211017050013_IMG_6329_h1suxk.webp'
+          alt='skate meeting gallery four'
           fill
           style={{ objectFit: 'cover' }}
           className='rounded-xl'
@@ -56,8 +56,8 @@ const Gallery = () => {
       </div>
       <div className='relative'>
         <Image
-          src='https://images.unsplash.com/photo-1618225747659-433d5a5c6af7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80'
-          alt='placeholder'
+          src='https://res.cloudinary.com/dloisor1x/image/upload/v1675544705/santa-ana-sk8nmeet/homepage/20220918183049_IMG_0177_eatyyi.webp'
+          alt='skate meeting gallery five'
           fill
           style={{ objectFit: 'cover' }}
           className='rounded-xl'
@@ -68,8 +68,8 @@ const Gallery = () => {
       </div>
       <div className='relative'>
         <Image
-          src='https://images.unsplash.com/photo-1517512765776-3c1686689919?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
-          alt='placeholder'
+          src='https://res.cloudinary.com/dloisor1x/image/upload/v1675544705/santa-ana-sk8nmeet/homepage/IMG_1982_Original_rpnecg.webp'
+          alt='skate meeting gallery six'
           fill
           style={{ objectFit: 'cover' }}
           className='rounded-xl'
