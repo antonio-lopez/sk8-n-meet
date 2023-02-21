@@ -7,7 +7,7 @@ const AboutBios = () => {
       <div className='grid grid-cols-1 lg:grid-cols-[288px,_1fr] my-14 gap-5'>
         <div className='relative h-96'>
           <Image
-            src='https://res.cloudinary.com/dloisor1x/image/upload/v1674152520/santa-ana-sk8nmeet/bio-images/IMG_0073_u8eslv.webp'
+            src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939651/sk8nmeet-santana/bio-covers/IMG_0073_u8eslv_buc63b.webp'
             alt='angela biography cover'
             fill
             style={{ objectFit: 'cover', objectPosition: '25% 25%' }}
@@ -47,7 +47,7 @@ const AboutBios = () => {
       <div className='grid grid-cols-1 lg:grid-cols-[1fr,_288px] my-14 gap-5'>
         <div className='relative h-96'>
           <Image
-            src='https://res.cloudinary.com/dloisor1x/image/upload/v1674152525/santa-ana-sk8nmeet/bio-images/IMG_0111_lbc5v5.webp'
+            src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939650/sk8nmeet-santana/bio-covers/IMG_0111_lbc5v5_b6odqy.webp'
             alt='ashley biography cover'
             className='object-right'
             fill

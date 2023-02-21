@@ -6,7 +6,7 @@ const AboutBlurb = () => {
       <div className='grid grid-cols-1 md:gap-y-14'>
         <div className='relative h-72 md:h-[28rem]'>
           <Image
-            src='https://res.cloudinary.com/dloisor1x/image/upload/v1674152525/santa-ana-sk8nmeet/bio-images/IMG_0171_uarmts.webp'
+            src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939649/sk8nmeet-santana/bio-covers/IMG_0171_uarmts_pz3nxm.webp'
             alt='members biography cover'
             fill
             style={{ objectFit: 'contain' }}

@@ -66,7 +66,7 @@ const Navbar = () => {
         <Link href='/'>
           <div className='h-16 w-40 relative'>
             <Image
-              src='https://res.cloudinary.com/dloisor1x/image/upload/v1672273075/santa-ana-sk8nmeet/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm.png'
+              src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939488/sk8nmeet-santana/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm_iixqkj.webp'
               alt='santa ana sk8nmeet logo'
               fill
               style={{ objectFit: 'contain' }}
@@ -98,7 +98,7 @@ const Navbar = () => {
             <div className='flex items-center justify-between py-1'>
               <div className='h-20 w-40 relative'>
                 <Image
-                  src='https://res.cloudinary.com/dloisor1x/image/upload/v1672273075/santa-ana-sk8nmeet/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm.png'
+                  src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939488/sk8nmeet-santana/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm_iixqkj.webp'
                   alt='santa ana sk8nmeet logo'
                   fill
                   style={{ objectFit: 'contain' }}

@@ -8,7 +8,7 @@ const Mission = () => {
       <PageHeader header='Mission' />
       <div className='relative h-56 md:h-[34rem]'>
         <Image
-          src='https://res.cloudinary.com/dloisor1x/image/upload/v1675544705/santa-ana-sk8nmeet/homepage/20220918180724_IMG_0160_m8oze3.webp'
+          src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939586/sk8nmeet-santana/homepage/20220918180724_IMG_0160_m8oze3_pvrvb4.webp'
           alt='group cover'
           fill
           style={{ objectFit: 'contain' }}
