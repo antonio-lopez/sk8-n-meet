@@ -9,28 +9,29 @@ export default defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
+      description: 'Name that will be displayed on About page and meetup uploads/edits',
     }),
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      description: 'Do not edit this section',
       options: {
         source: 'name',
         maxLength: 96,
       },
     }),
     defineField({
+      title: 'Author Image',
+      type: 'cloudinary.asset',
       name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      description: 'Image to be used in About Us page',
     }),
     defineField({
       name: 'bio',
       title: 'Bio',
       type: 'array',
+      description: 'Can be edited / updated at any time',
       of: [
         {
           title: 'Block',
