@@ -1,63 +1,28 @@
 import Image from 'next/image';
+import { ICloudinaryList } from '../../utils/interfaces';
 
-const Highlights = () => {
+interface cloudinaryImages {
+  cloudinaryList?: ICloudinaryList[];
+}
+
+const Highlights = ({ cloudinaryList }: cloudinaryImages) => {
   return (
-    <div className='grid grid-cols-2 lg:grid-cols-5 h-96 gap-4 my-14'>
-      <div className='relative'>
-        <Image
-          src='https://images.unsplash.com/photo-1612949044356-9bd612f5fbe6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80'
-          alt='placeholder'
-          fill
-          style={{ objectFit: 'cover' }}
-          sizes='(max-width: 768px) 100vw,
+    <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 my-14'>
+      {cloudinaryList &&
+        cloudinaryList.map((images) => (
+          <div key={images._key} className='relative h-72 lg:h-96'>
+            <Image
+              id={images._key}
+              src={images.secure_url}
+              alt={images.public_id}
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
-        />
-      </div>
-      <div className='relative'>
-        <Image
-          src='https://images.unsplash.com/photo-1622893862979-176ff88a68f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80'
-          alt='placeholder'
-          fill
-          style={{ objectFit: 'cover' }}
-          sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
-        />
-      </div>
-      <div className='relative'>
-        <Image
-          src='https://images.unsplash.com/photo-1613084551663-e596c62cdbdb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'
-          alt='placeholder'
-          fill
-          style={{ objectFit: 'cover' }}
-          sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
-        />
-      </div>
-      <div className='relative'>
-        <Image
-          src='https://images.unsplash.com/photo-1571987936987-ffaa42bb1742?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'
-          alt='placeholder'
-          fill
-          style={{ objectFit: 'cover' }}
-          sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
-        />
-      </div>
-      <div className='relative hidden lg:block'>
-        <Image
-          src='https://images.unsplash.com/photo-1618225747659-433d5a5c6af7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80'
-          alt='placeholder'
-          fill
-          style={{ objectFit: 'cover' }}
-          sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
-        />
-      </div>
+            />
+          </div>
+        ))}
     </div>
   );
 };

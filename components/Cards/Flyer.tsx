@@ -1,25 +1,23 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { IMeetup } from '../../utils/interfaces';
 
-interface Props {
-  id: number;
-  image: string;
-  alt: string;
-}
-
-const Flyer = ({ image, alt }: Props) => {
+const Flyer = ({ image, title, slug }: IMeetup) => {
   return (
-    <div className='relative w-72 lg:w-96 h-72 lg:h-96'>
-      <Image
-        src={image}
-        alt={alt}
-        fill
-        style={{ objectFit: 'cover' }}
-        className='rounded-xl'
-        sizes='(max-width: 768px) 100vw,
+    <Link href={`/meetup/${slug.current}`}>
+      <div className='relative w-72 lg:w-96 h-72 lg:h-96'>
+        <Image
+          src={image.secure_url}
+          alt={title}
+          fill
+          style={{ objectFit: 'fill' }}
+          className='rounded-xl'
+          sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
-      />
-    </div>
+        />
+      </div>
+    </Link>
   );
 };
 

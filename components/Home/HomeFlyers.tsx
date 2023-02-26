@@ -1,49 +1,24 @@
 import Flyer from '../Cards/Flyer';
+import { IMeetup } from '../../utils/interfaces';
 
-interface Props {
-  id: number;
-  image: string;
-  alt: string;
+interface Flyers {
+  meetups: IMeetup[];
 }
 
-const flyersCurrent: Props[] = [
-  {
-    id: 0,
-    image:
-      'https://res.cloudinary.com/dloisor1x/image/upload/v1672550541/santa-ana-sk8nmeet/logos/flyer1_xj0atq.webp',
-    alt: 'flyer image',
-  },
-  {
-    id: 1,
-    image:
-      'https://res.cloudinary.com/dloisor1x/image/upload/v1672550541/santa-ana-sk8nmeet/logos/flyer1_xj0atq.webp',
-    alt: 'flyer image',
-  },
-  {
-    id: 2,
-    image:
-      'https://res.cloudinary.com/dloisor1x/image/upload/v1672550541/santa-ana-sk8nmeet/logos/flyer1_xj0atq.webp',
-    alt: 'flyer image',
-  },
-  {
-    id: 3,
-    image:
-      'https://res.cloudinary.com/dloisor1x/image/upload/v1672550541/santa-ana-sk8nmeet/logos/flyer1_xj0atq.webp',
-    alt: 'flyer image',
-  },
-];
-
-const HomeFlyers = () => {
+const HomeFlyers = ({ meetups }: Flyers) => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 items-center justify-items-center gap-y-8 lg:mx-36'>
-      {flyersCurrent.map((flyer) => (
-        <Flyer
-          id={flyer.id}
-          key={flyer.id}
-          image={flyer.image}
-          alt={flyer.alt}
-        />
-      ))}
+      {meetups.map((flyer) => {
+        return (
+          <Flyer
+            _id={Number(flyer._id)}
+            key={flyer._id}
+            image={flyer.image}
+            title={flyer.title}
+            slug={flyer.slug}
+          />
+        );
+      })}
     </div>
   );
 };
