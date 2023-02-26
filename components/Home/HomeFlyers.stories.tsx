@@ -6,6 +6,6 @@ export default {
   component: HomeFlyers,
 } as ComponentMeta<typeof HomeFlyers>;
 
-const Template: ComponentStory<typeof HomeFlyers> = () => <HomeFlyers />;
+const Template: ComponentStory<typeof HomeFlyers> = () => <></>;
 
 export const Primary = Template.bind({});
