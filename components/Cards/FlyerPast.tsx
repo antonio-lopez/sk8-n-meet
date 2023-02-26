@@ -1,19 +1,14 @@
 import Image from 'next/image';
+import { IMeetup } from '../../utils/interfaces';
+import Link from 'next/link';
 
-interface Props {
-  id: number;
-  image: string;
-  alt: string;
-  eventDate: string;
-}
-
-const FlyerPast = ({ image, alt, eventDate }: Props) => {
+const FlyerPast = ({ image, title, meetupDate, slug }: IMeetup) => {
   return (
-    <div>
+    <Link href={`/meetup/${slug.current}`}>
       <div className='relative w-72 h-72'>
         <Image
-          src={image}
-          alt={alt}
+          src={image.secure_url}
+          alt={title}
           fill
           style={{ objectFit: 'cover' }}
           className='rounded-xl'
@@ -23,9 +18,9 @@ const FlyerPast = ({ image, alt, eventDate }: Props) => {
         />
       </div>
       <p className='text-white text-center text-2xl pt-4 font-["Erica_One"]'>
-        {eventDate}
+        {meetupDate}
       </p>
-    </div>
+    </Link>
   );
 };
 

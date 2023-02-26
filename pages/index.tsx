@@ -11,7 +11,6 @@ interface Meetups {
 }
 
 const Home = ({ meetups }: Meetups) => {
-  console.log(meetups);
   return (
     <>
       <Hero />
@@ -26,7 +25,7 @@ const Home = ({ meetups }: Meetups) => {
 };
 
 export const getServerSideProps = async () => {
-  const meetupQuery = `*[_type == "meetup"]`;
+  const meetupQuery = `*[_type == "meetup"] | order(meetupDate desc)[0..4]`;
   const meetups = await client.fetch(meetupQuery);
 
   return {

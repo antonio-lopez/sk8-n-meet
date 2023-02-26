@@ -1,15 +1,12 @@
 import Flyer from '../Cards/Flyer';
+import { IMeetup } from '../../utils/interfaces';
 
-const NextMeetUpDetails = () => {
+const NextMeetUpDetails = ({ _id, image, title, slug }: IMeetup) => {
   return (
     <section className='mb-10'>
       <div className='grid grid-cols-1 lg:grid-cols-[28rem,_1fr] place-items-center gap-y-6'>
         <div>
-          <Flyer
-            id={1672550541}
-            image='https://res.cloudinary.com/dloisor1x/image/upload/v1672550541/santa-ana-sk8nmeet/logos/flyer1_xj0atq.webp'
-            alt='flyer cover'
-          />
+          <Flyer _id={_id} image={image} title={title} slug={slug} />
         </div>
         <div className='w-80 md:w-full h-full'>
           {/* embed google calendar */}
