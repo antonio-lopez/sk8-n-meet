@@ -25,4 +25,6 @@ export interface ICloudinaryList {
   _key: string;
   secure_url: string;
   public_id: string;
+  version?: string;
+  format?: string;
 }

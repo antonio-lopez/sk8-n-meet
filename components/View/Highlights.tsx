@@ -9,20 +9,24 @@ const Highlights = ({ cloudinaryList }: cloudinaryImages) => {
   return (
     <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 my-14'>
       {cloudinaryList &&
-        cloudinaryList.map((images) => (
-          <div key={images._key} className='relative h-72 lg:h-96'>
-            <Image
-              id={images._key}
-              src={images.secure_url}
-              alt={images.public_id}
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes='(max-width: 768px) 100vw,
+        cloudinaryList.map(
+          ({ public_id, _key, secure_url, format, version }, indx) => (
+            <div key={_key} className='relative h-72'>
+              <Image
+                id={_key}
+                // src={images.secure_url}
+                src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/v${version}/${public_id}.${format}`}
+                alt={public_id}
+                fill
+                loading={indx < 3 ? 'eager' : 'lazy'} // loads the first 3 images and lazy loads the rest
+                style={{ objectFit: 'cover' }}
+                sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
-            />
-          </div>
-        ))}
+              />
+            </div>
+          )
+        )}
     </div>
   );
 };

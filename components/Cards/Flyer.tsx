@@ -9,6 +9,7 @@ const Flyer = ({ image, title, slug }: IMeetup) => {
         <Image
           src={image.secure_url}
           alt={title}
+          priority
           fill
           style={{ objectFit: 'fill' }}
           className='rounded-xl'

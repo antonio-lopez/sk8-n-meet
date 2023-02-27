@@ -10,7 +10,7 @@ const FlyerPast = ({ image, title, meetupDate, slug }: IMeetup) => {
           src={image.secure_url}
           alt={title}
           fill
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'fill' }}
           className='rounded-xl'
           sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
