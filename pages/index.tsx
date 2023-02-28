@@ -28,7 +28,7 @@ const Home = ({ meetups }: Meetups) => {
 };
 
 export const getServerSideProps = async () => {
-  const meetupQuery = `*[_type == "meetup"] | order(meetupDate desc)[0..4]`;
+  const meetupQuery = `*[_type == "meetup"] | order(meetupDate desc)[0..3]`;
   const meetups = await client.fetch(meetupQuery);
 
   return {
