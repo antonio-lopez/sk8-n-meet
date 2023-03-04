@@ -13,7 +13,7 @@ const Hero = () => {
         </div>
         <div className='relative'>
           <Image
-            src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939488/sk8nmeet-santana/logos/Sk8_n_meet-_Santa_Ana_logo_ot8d2y_pwummq.webp'
+            src='https://res.cloudinary.com/dzhengjen/image/upload/c_scale,w_720/v1676939488/sk8nmeet-santana/logos/Sk8_n_meet-_Santa_Ana_logo_ot8d2y_pwummq.webp'
             alt='company logo'
             fill
             style={{ objectFit: 'contain' }}

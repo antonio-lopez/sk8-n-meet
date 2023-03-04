@@ -3,11 +3,12 @@ import { IMeetup } from '../../utils/interfaces';
 import Link from 'next/link';
 
 const FlyerPast = ({ image, title, meetupDate, slug }: IMeetup) => {
+  const { format, public_id, version } = image;
   return (
     <Link href={`/meetup/${slug.current}`}>
       <div className='relative w-72 h-72'>
         <Image
-          src={image.secure_url}
+          src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/v${version}/${public_id}.${format}`}
           alt={title}
           fill
           style={{ objectFit: 'fill' }}

@@ -3,11 +3,13 @@ import Link from 'next/link';
 import { IMeetup } from '../../utils/interfaces';
 
 const Flyer = ({ image, title, slug }: IMeetup) => {
+  const { format, public_id, version } = image;
+
   return (
     <Link href={`/meetup/${slug.current}`}>
       <div className='relative w-72 lg:w-96 h-72 lg:h-96'>
         <Image
-          src={image.secure_url}
+          src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/v${version}/${public_id}.${format}`}
           alt={title}
           priority
           fill

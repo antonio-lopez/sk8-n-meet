@@ -9,9 +9,7 @@ export interface NavbarLinksWithSubLinks extends Array<NavbarLink> {}
 
 export interface IMeetup {
   _id: number;
-  image: {
-    secure_url: string;
-  };
+  image: ICloudinaryList;
   title: string;
   slug: {
     current: string;
