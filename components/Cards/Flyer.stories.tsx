@@ -14,6 +14,8 @@ Primary.args = {
   image: {
     secure_url:
       'https://res.cloudinary.com/dloisor1x/image/upload/v1672550541/santa-ana-sk8nmeet/logos/flyer1_xj0atq.webp',
+    public_id: '',
+    _key: '',
   },
   title: 'event flyer',
 };
