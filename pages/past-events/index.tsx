@@ -12,9 +12,9 @@ const PastMeetUp = ({ meetups }: Meetups) => {
     <>
       <PageHeader header='Past Meet Ups' />
       <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8 items-center justify-items-center mx-auto mb-16'>
-        {meetups.map((meetup) => (
+        {meetups.map((meetup, indx) => (
           <FlyerPast
-            _id={Number(meetup._id)}
+            _id={indx}
             key={meetup._id}
             image={meetup.image}
             title={meetup.title}
