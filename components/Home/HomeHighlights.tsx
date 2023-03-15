@@ -8,7 +8,7 @@ interface cloudinaryImages {
 const HomeHighlights = ({ cloudinaryList }: cloudinaryImages) => {
   return (
     <section>
-      <div className='grid grid-cols-2 lg:grid-cols-5 h-96 gap-4 mb-14'>
+      <div className='grid grid-rows-2 lg:grid-rows-1 grid-cols-2 lg:grid-cols-5 h-96 gap-4 mb-14'>
         {cloudinaryList?.map(({ public_id, _key, format, version }) => (
           <div key={_key} className='relative'>
             <Image

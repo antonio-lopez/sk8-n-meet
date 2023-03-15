@@ -6,13 +6,6 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      description: 'Use Meetup Date as title ex(February 13 2023)',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: 'meetupDate',
       title: 'Meetup Date',
       type: 'date',
@@ -35,6 +28,13 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      description: 'Use Meetup Date as title ex(February 13 2023)',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
@@ -52,7 +52,7 @@ export default defineType({
       title: 'Meetup Photos',
       type: 'array',
       name: 'cloudinaryList',
-      description: 'Additional photos, limit to 10',
+      description: 'Additional photos',
       of: [{type: 'cloudinary.asset'}],
     }),
 
