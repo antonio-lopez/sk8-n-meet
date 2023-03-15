@@ -4,6 +4,7 @@ import PageHeader from '../../components/View/PageHeader';
 import NextMeetUpDetails from '../../components/NextMeetUp/NextMeetUpDetails';
 import Divider from '../../components/View/Divider';
 import Highlights from '../../components/View/Highlights';
+import HomeHighlights from '../../components/Home/HomeHighlights';
 
 interface Meetup {
   currentMeetup: IMeetup[];
@@ -11,20 +12,20 @@ interface Meetup {
 
 const NextMeetUp = ({ currentMeetup }: Meetup) => {
   const { _id, image, title, slug } = currentMeetup[0];
-  const { cloudinaryList } = currentMeetup[1];
-  const cloudinaryImages = cloudinaryList?.slice(0, 3);
+  const { cloudinaryList } = currentMeetup[3];
+  const cloudinaryImages = cloudinaryList?.slice(0, 5);
   return (
     <>
       <PageHeader header='Our Next Meet Up' />
       <NextMeetUpDetails _id={_id} image={image} title={title} slug={slug} />
       <Divider />
-      <Highlights cloudinaryList={cloudinaryImages} />
+      <HomeHighlights cloudinaryList={cloudinaryImages} />
     </>
   );
 };
 
 export const getServerSideProps = async () => {
-  const meetupQuery = `*[_type == "meetup"] | order(meetupDate desc)[0..2]`;
+  const meetupQuery = `*[_type == "meetup"] | order(meetupDate desc)[0..3]`;
   const currentMeetup = await client.fetch(meetupQuery);
 
   return {

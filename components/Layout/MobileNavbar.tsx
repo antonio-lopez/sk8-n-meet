@@ -28,11 +28,11 @@ const mobileLinks: Array<NavbarLink> = [
     route: '/past-events',
     routeName: 'Past Events',
   },
-  {
-    id: 5,
-    route: '/contact',
-    routeName: 'Contact',
-  },
+  // {
+  //   id: 5,
+  //   route: '/contact',
+  //   routeName: 'Contact',
+  // },
 ];
 
 const MobileNavbar = (props: { onClick: () => void }) => {

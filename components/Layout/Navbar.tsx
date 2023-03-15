@@ -155,14 +155,16 @@ const Navbar = () => {
                 );
               })}
 
-              <li key={linksWithNoSublinks[1].id}>
+              {/* CONTACT PAGE LINK */}
+
+              {/* <li key={linksWithNoSublinks[1].id}>
                 <Link
                   className='hover:text-yellowGreen'
                   href={linksWithNoSublinks[1].route}
                 >
                   {linksWithNoSublinks[1].routeName}
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

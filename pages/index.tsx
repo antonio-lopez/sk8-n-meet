@@ -11,7 +11,7 @@ interface Meetups {
 }
 
 const Home = ({ meetups }: Meetups) => {
-  const { cloudinaryList } = meetups[1];
+  const { cloudinaryList } = meetups[3];
   const cloudinaryImages = cloudinaryList?.slice(0, 5);
 
   return (
