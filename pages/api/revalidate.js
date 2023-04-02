@@ -9,7 +9,7 @@ export default async function handler(req, res) {
       !isValidSignature(
         JSON.stringify(req.body),
         signature,
-        process.env.SANITY_WEBHOOK_SECRET
+        process.env.NEXT_PUBLIC_SANITY_WEBHOOK_SECRET
       )
     )
       return res.status(401).json({ msg: 'Invalid request!' });
