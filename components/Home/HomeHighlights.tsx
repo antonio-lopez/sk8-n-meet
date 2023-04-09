@@ -9,11 +9,11 @@ const HomeHighlights = ({ cloudinaryList }: cloudinaryImages) => {
   return (
     <section>
       <div className='grid grid-rows-2 lg:grid-rows-1 grid-cols-2 lg:grid-cols-5 h-96 gap-4 mb-14'>
-        {cloudinaryList?.map(({ public_id, _key, format, version }) => (
+        {cloudinaryList?.map(({ public_id, _key, version }) => (
           <div key={_key} className='relative'>
             <Image
               id={_key}
-              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/v${version}/${public_id}.${format}`}
+              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/v${version}/${public_id}.webp`}
               alt={public_id}
               fill
               style={{ objectFit: 'cover' }}
