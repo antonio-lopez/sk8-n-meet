@@ -7,12 +7,11 @@ const handler = async (req, res) => {
       !isValidSignature(
         JSON.stringify(req.body),
         signature,
-        process.env.NEXT_PUBLIC_SANITY_WEBHOOK_SECRET
+        process.env.SANITY_WEBHOOK_SECRET
       )
     )
       return res.status(401).json({ msg: 'Invalid request!' });
     const { slug } = req.body;
-    await res.revalidate(`/meetup/`);
     await res.revalidate(`/meetup/${slug}`);
     console.log('slug:', slug);
     res.status(200).json({ msg: 'Meetup pages revalidated.' });
@@ -21,4 +20,4 @@ const handler = async (req, res) => {
   }
 };
 
-export default handler;
+export default handler; 
