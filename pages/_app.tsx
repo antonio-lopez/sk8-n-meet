@@ -9,10 +9,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NextSeo
         title='Sk8NMeet Santana'
         description='The first non-traditional skateboarding group in Santa Ana who hosts monthly meet ups for all skill levels by creating community, friendship, and lasting connections through skateboarding. We aim to provide thriving safe spaces for skaters who identify as female, queer, trans and/or nonbinary.'
-        canonical='https://sk8nmeetsantana.vercel.app/'
+        canonical='https://sk8nmeetsantana.com/'
         openGraph={{
           type: 'website',
-          url: 'https://sk8nmeetsantana.vercel.app/',
+          url: 'https://sk8nmeetsantana.com/',
           title: 'Sk8NMeet Santana',
           description:
             'The first non-traditional skateboarding group in Santa Ana who hosts monthly meet ups for all skill levels by creating community, friendship, and lasting connections through skateboarding. We aim to provide thriving safe spaces for skaters who identify as female, queer, trans and/or nonbinary.',

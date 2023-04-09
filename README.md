@@ -1,27 +1,58 @@
-# Next.js + Tailwind CSS Example
+<div id="top"></div>
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+# Sk8NMeet Santana
 
-## Deploy your own
+> The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.
+> 
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+## Table of contents
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+  - [Highlights](#highlights)
+- [Acknowledgments](#acknowledgments)
+- [Author](#author)
 
-## How to use
+## About The Project
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+The goal of this project was to create a website for [Sk8NMeet Santana](https://www.instagram.com/sk8_n_meet_santana/) using their requirements. I implemented a way for the team to update the website's content using [Sanity](https://www.sanity.io/) as the content management system (CMS) for creating, editing, and deleting meetups. [Cloudinary](https://cloudinary.com/) was used for image hosting and optimization. Its plugin is used inside Sanity Studio and allows the team to choose which photos to use for a new meetup or update existing photos. 
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+### Highlights
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+- On-demand incremental static regeneration for static pages with updated / new data
+- Sanity content management system for managing data
+- Cloudinary image optimization for improving website performance
+- Google calendar integration
+- Storybook and Figma for wireframes and prototyping 
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Built With
+
+- [Next.js](https://nextjs.org/)
+- [React.js](https://reactjs.org/)
+- [Cloudinary](https://cloudinary.com/)
+- [Sanity io](https://www.sanity.io/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Storybook](https://storybook.js.org/)
+
+🌐 [Live](https://sk8nmeetsantana.com/)
+
+🎨 [Figma Design](https://www.figma.com/file/sEyQoPJFrbL2WFhx2FFDtY/Sk8NMeet?node-id=0%3A1&t=Xbab4PpbzSwldwkS-1)
+
+![screenshot](/public//uploads/homepage-sk8nmeet-santana.png)
+
+## Acknowledgments
+
+- [Sk8NMeet Santana](https://www.instagram.com/sk8_n_meet_santana/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Author
+
+👤 **Antonio Lopez**
+
+- Website: [Antonio Lopez](https://www.antoniolopez.me/)
+- Github: [@antonio-lopez](https://github.com/antonio-lopez)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
