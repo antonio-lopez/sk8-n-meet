@@ -26,3 +26,7 @@ export interface ICloudinaryList {
   version?: string;
   format?: string;
 }
+
+export interface IHighlight {
+  cloudinaryList?: ICloudinaryList[];
+}
