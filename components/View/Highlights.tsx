@@ -23,7 +23,7 @@ const Highlights = ({ cloudinaryList }: cloudinaryImages) => {
         {cloudinaryList?.map(({ public_id, _key, version }, indx) => (
           <div
             key={_key}
-            className='relative h-72'
+            className='relative h-72 hover:cursor-zoom-in'
             onClick={() =>
               openImageModal(
                 `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/h_720,c_scale/v${version}/${public_id}.webp`
