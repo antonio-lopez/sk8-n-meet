@@ -1,13 +1,47 @@
+import { GetServerSideProps, Redirect } from 'next';
 import FlyerPast from '../../components/Cards/FlyerPast';
 import PageHeader from '../../components/View/PageHeader';
 import { IMeetup } from '../../utils/interfaces';
 import { client } from '../../utils/client';
+import { useState } from 'react';
+import Router from 'next/router';
+import { AiOutlineCaretRight, AiOutlineCaretLeft } from 'react-icons/ai';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-interface Meetups {
+interface serverProps {
   meetups: IMeetup[];
+  totalPageCount: number;
+  pageNumber: number;
 }
 
-const PastMeetUp = ({ meetups }: Meetups) => {
+const PastMeetUp = ({
+  meetups,
+  totalPageCount,
+  pageNumber,
+}: {
+  meetups: IMeetup[];
+  totalPageCount: number;
+  pageNumber: number;
+}) => {
+  const [btnDisabled, setBtnDisabled] = useState(false);
+  const [page, setPage] = useState(pageNumber);
+
+  const nextPage = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    setBtnDisabled(true);
+    setPage((prev) => prev + 1);
+    Router.push({ pathname: '/past-events', query: { page: `${page + 1}` } });
+    setBtnDisabled(false);
+  };
+
+  const prevPage = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    setBtnDisabled(true);
+    setPage((prev) => prev - 1);
+    Router.push({ pathname: '/past-events', query: { page: `${page - 1}` } });
+    setBtnDisabled(false);
+  };
+
   return (
     <>
       <PageHeader header='Past Meet Ups' />
@@ -23,16 +57,68 @@ const PastMeetUp = ({ meetups }: Meetups) => {
           />
         ))}
       </div>
+      <div className='flex w-full items-center justify-between space-x-9 my-10 lg:my-20 text-xl font-["Erica_One"]'>
+        <button
+          type='button'
+          className='flex items-end justify-center px-4 text-white disabled:opacity-50 disabled:hover:text-white hover:text-yellowGreen'
+          disabled={btnDisabled || page === 1}
+          onClick={prevPage}
+        >
+          <IoIosArrowBack className='mr-1 h-6 w-6' />
+          Previous
+        </button>
+
+        <button
+          type='button'
+          className='flex items-end justify-center px-4 text-white disabled:opacity-50 disabled:hover:text-white hover:text-yellowGreen'
+          disabled={btnDisabled || pageNumber === totalPageCount}
+          onClick={nextPage}
+        >
+          Next
+          <IoIosArrowForward className='ml-1 h-6 w-6' />
+        </button>
+      </div>
     </>
   );
 };
 
-export const getServerSideProps = async () => {
-  const meetupQuery = `*[_type == "meetup"] | order(meetupDate desc)`;
-  const meetups = await client.fetch(meetupQuery);
+export const getServerSideProps: GetServerSideProps<serverProps> = async (
+  context
+) => {
+  const pageNumber = context.query.page ? Number(context.query.page) : 1;
+  const ITEMS_PER_PAGE = 8;
+
+  const COLLECTION_QUERY = `*[_type == "meetup"] | order(meetupDate desc)`;
+
+  if (context.resolvedUrl == '/past-events') {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/past-events?page=1',
+      },
+    };
+  }
+
+  const meetupData = await client.fetch(
+    `
+    {
+      "meetups": ${COLLECTION_QUERY} [($pageIndex * ${ITEMS_PER_PAGE})...($pageIndex + 1) * ${ITEMS_PER_PAGE}],
+      "pagination" : {
+        "totalPageCount" : count(${COLLECTION_QUERY}._id) / ${ITEMS_PER_PAGE},
+        "pageNumber": $pageIndex + 1,
+      }
+    }`,
+    {
+      pageIndex: pageNumber - 1,
+    }
+  );
 
   return {
-    props: { meetups },
+    props: {
+      meetups: meetupData.meetups,
+      totalPageCount: Math.ceil(meetupData.pagination?.totalPageCount || 1),
+      pageNumber: meetupData.pagination.pageNumber,
+    },
   };
 };
 
