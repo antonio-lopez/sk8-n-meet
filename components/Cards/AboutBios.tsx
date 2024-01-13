@@ -1,21 +1,20 @@
-import Image from 'next/image';
+// import Image from 'next/image';
+import Image from "../View/Image";
 
 const AboutBios = () => {
   return (
     <section>
       {/* bio 1 */}
-      <div className='grid grid-cols-1 lg:grid-cols-[288px,_1fr] my-14 gap-5'>
-        <div className='relative h-96'>
-          <Image
-            src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939651/sk8nmeet-santana/bio-covers/IMG_0073_u8eslv_buc63b.webp'
-            alt='angela biography cover'
-            fill
-            style={{ objectFit: 'cover', objectPosition: '25% 25%' }}
-            sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
-          />
-        </div>
+      <div className='grid grid-cols-1 lg:grid-cols-[288px,_1fr] my-14 gap-5 justify-items-center'>
+        <Image
+          smallImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705168093/assets/bio-covers/IMG_0073-600w_xbhdpo.webp'
+          largeImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705168093/assets/bio-covers/IMG_0073-1000w_qy57hu.webp'
+          height='384'
+          width='300'
+          loading='eager'
+          sizes='(max-width: 768px) 100vw, 45vw'
+          alt='angela biography cover'
+        />
         <div className='w-full'>
           <h2 className='text-nadeshikoPink text-center lg:text-left text-3xl md:text-4xl mb-5'>
             Angela
@@ -44,19 +43,16 @@ const AboutBios = () => {
       </div>
 
       {/* bio 2 */}
-      <div className='grid grid-cols-1 lg:grid-cols-[1fr,_288px] my-14 gap-5'>
-        <div className='relative h-96'>
-          <Image
-            src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939650/sk8nmeet-santana/bio-covers/IMG_0111_lbc5v5_b6odqy.webp'
-            alt='ashley biography cover'
-            className='object-right'
-            fill
-            style={{ objectFit: 'cover' }}
-            sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
-          />
-        </div>
+      <div className='grid grid-cols-1 lg:grid-cols-[1fr,400px] my-14 gap-5'>
+        <Image
+          smallImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705168094/assets/bio-covers/IMG_0111-600w_jrti3s.webp'
+          largeImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705168094/assets/bio-covers/IMG_0111-1000w_sspxab.webp'
+          height='316'
+          width='400'
+          loading='lazy'
+          sizes='(max-width: 768px) 100vw, 33vw'
+          alt='ashley biography cover'
+        />
         <div className='lg:row-start-1'>
           <h2 className='text-nadeshikoPink text-center lg:text-left text-3xl md:text-4xl mb-5'>
             Ashley

@@ -1,21 +1,19 @@
-import Image from 'next/image';
+// import Image from "next/image";
+import Image from "../View/Image";
 
 const AboutBlurb = () => {
   return (
     <section className='text-white pb-10'>
-      <div className='grid grid-cols-1 md:gap-y-14'>
-        <div className='relative h-72 md:h-[28rem]'>
-          <Image
-            src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939649/sk8nmeet-santana/bio-covers/IMG_0171_uarmts_pz3nxm.webp'
-            alt='members biography cover'
-            fill
-            style={{ objectFit: 'contain' }}
-            sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
-            priority
-          />
-        </div>
+      <div className='grid grid-cols-1 place-items-center gap-y-14'>
+        <Image
+          smallImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705168094/assets/bio-covers/IMG_0171-600w_yp7xpt.webp'
+          largeImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705168095/assets/bio-covers/IMG_0171-1000w_h5ipp7.webp'
+          height='432'
+          width='648'
+          loading='eager'
+          sizes='(max-width: 768px) 100vw, 45vw'
+          alt='ashley and angela group cover'
+        />
         <p className='text-slimSilver lg:text-lg lg:px-14 mx-auto'>
           As non-traditional skaters, we usually couldn’t see ourselves
           reflected in skaters you would normally see at skateparks throughout
