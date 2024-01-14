@@ -1,20 +1,21 @@
-import PageHeader from '../../components/View/PageHeader';
-import Image from 'next/image';
-import Divider from '../../components/View/Divider';
+import PageHeader from "../../components/View/PageHeader";
+import Divider from "../../components/View/Divider";
+import Image from "../../components/View/Image";
 
 const Mission = () => {
   return (
     <>
       <PageHeader header='Mission' />
-      <div className='relative h-56 md:h-[34rem]'>
+
+      <div className='flex justify-center'>
         <Image
-          src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939586/sk8nmeet-santana/homepage/20220918180724_IMG_0160_m8oze3_pvrvb4.webp'
-          alt='group cover'
-          fill
-          style={{ objectFit: 'contain' }}
-          sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
+          smallImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705190380/assets/mission/20220918180724_IMG_0160-600w_qzmfod.webp'
+          largeImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705190380/assets/mission/20220918180724_IMG_0160-1000w_av49mc.webp'
+          alt='sk8nmeet santana mission group cover'
+          loading='eager'
+          width='800'
+          height='550'
+          sizes='(max-width: 768px) 100vw, 45vw'
         />
       </div>
 
