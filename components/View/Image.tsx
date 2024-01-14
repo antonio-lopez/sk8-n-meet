@@ -6,6 +6,7 @@ interface ImageProps {
   sizes: string;
   loading: "eager" | "lazy" | undefined;
   alt: string;
+  className?: string;
 }
 
 const Image = ({
@@ -16,6 +17,7 @@ const Image = ({
   width,
   loading,
   alt,
+  className,
 }: ImageProps) => (
   <picture>
     <source
@@ -30,6 +32,7 @@ const Image = ({
       height={height}
       width={width}
       alt={alt}
+      className={className}
     />
   </picture>
 );

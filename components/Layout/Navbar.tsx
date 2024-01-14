@@ -1,57 +1,57 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState, lazy, Suspense } from 'react';
-import { NavbarLink, NavbarLinksWithSubLinks } from '../../utils/interfaces';
-import { FaTiktok, FaInstagram, FaSpotify } from 'react-icons/fa';
-import { BiMenuAltRight } from 'react-icons/bi';
-import { AiOutlineClose } from 'react-icons/ai';
-const LazyLoadMobileNavbar = lazy(() => import('./MobileNavbar'));
+import Link from "next/link";
+import { useState, lazy, Suspense } from "react";
+import { NavbarLink, NavbarLinksWithSubLinks } from "../../utils/interfaces";
+import { FaTiktok, FaInstagram, FaSpotify } from "react-icons/fa";
+import { BiMenuAltRight } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
+import Image from "../View/Image";
+const LazyLoadMobileNavbar = lazy(() => import("./MobileNavbar"));
 
 const linksWithNoSublinks: Array<NavbarLink> = [
   {
     id: 0,
-    route: '/',
-    routeName: 'Home',
+    route: "/",
+    routeName: "Home",
   },
   {
     id: 1,
-    route: '/contact',
-    routeName: 'Contact',
+    route: "/contact",
+    routeName: "Contact",
   },
 ];
 
 const linksWithSublinks: NavbarLinksWithSubLinks = [
   {
     id: 0,
-    route: '/about',
-    routeName: 'About',
+    route: "/about",
+    routeName: "About",
     subLinks: [
       {
         id: 0,
-        route: '/about',
-        routeName: 'About Us',
+        route: "/about",
+        routeName: "About Us",
       },
       {
         id: 1,
-        route: '/mission',
-        routeName: 'Mission',
+        route: "/mission",
+        routeName: "Mission",
       },
     ],
   },
   {
     id: 1,
-    route: '/current-events',
-    routeName: 'Events',
+    route: "/current-events",
+    routeName: "Events",
     subLinks: [
       {
         id: 0,
-        route: '/current-events',
-        routeName: 'Current',
+        route: "/current-events",
+        routeName: "Current",
       },
       {
         id: 1,
-        route: '/past-events',
-        routeName: 'Past',
+        route: "/past-events",
+        routeName: "Past",
       },
     ],
   },
@@ -64,17 +64,17 @@ const Navbar = () => {
     <nav className='bg-smokyBlack text-white h-20'>
       <div className='layout flex justify-between items-center h-full'>
         <Link href='/'>
-          <div className='h-16 w-40 relative'>
-            <Image
-              src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939488/sk8nmeet-santana/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm_iixqkj.webp'
-              alt='santa ana sk8nmeet logo'
-              fill
-              style={{ objectFit: 'contain' }}
-              sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
-            />
-          </div>
+          <Image
+            smallImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705266116/assets/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm-300w_yxuxy7.webp'
+            largeImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705266116/assets/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm-300w_yxuxy7.webp'
+            alt='sk8nmeet santana logo'
+            height='64'
+            width='120'
+            loading='eager'
+            sizes='(max-width: 768px) 100vw,
+          (max-width: 1200px) 50vw,
+          33vw'
+          />
         </Link>
 
         {/* mobile menu open  */}
@@ -90,23 +90,23 @@ const Navbar = () => {
         {/* MOBILE NAVBAR */}
         <div
           className={`${
-            isOpen ? 'translate-y-0' : '-translate-y-full'
+            isOpen ? "translate-y-0" : "-translate-y-full"
           } absolute lg:hidden top-0 left-0 right-0 z-20 min-h-screen w-full bg-raisinBlack transition-all duration-700`}
         >
           {/* mobile header */}
           <div className='layout'>
             <div className='flex items-center justify-between py-1'>
-              <div className='h-20 w-40 relative'>
-                <Image
-                  src='https://res.cloudinary.com/dzhengjen/image/upload/v1676939488/sk8nmeet-santana/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm_iixqkj.webp'
-                  alt='santa ana sk8nmeet logo'
-                  fill
-                  style={{ objectFit: 'contain' }}
-                  sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
-                />
-              </div>
+              <Image
+                smallImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705266116/assets/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm-300w_yxuxy7.webp'
+                largeImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705266116/assets/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm-300w_yxuxy7.webp'
+                alt='sk8nmeet santana logo'
+                height='86'
+                width='155'
+                loading='eager'
+                sizes='(max-width: 768px) 100vw,
+          (max-width: 1200px) 50vw,
+          33vw'
+              />
               <button
                 type='button'
                 aria-label='close mobile menu'
@@ -154,17 +154,6 @@ const Navbar = () => {
                   </li>
                 );
               })}
-
-              {/* CONTACT PAGE LINK */}
-
-              {/* <li key={linksWithNoSublinks[1].id}>
-                <Link
-                  className='hover:text-yellowGreen'
-                  href={linksWithNoSublinks[1].route}
-                >
-                  {linksWithNoSublinks[1].routeName}
-                </Link>
-              </li> */}
             </ul>
           </div>
 
