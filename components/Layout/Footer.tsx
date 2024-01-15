@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { FaTiktok, FaInstagram, FaSpotify } from 'react-icons/fa';
+import Image from "../View/Image";
+import { FaTiktok, FaInstagram, FaSpotify } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -37,15 +37,15 @@ const Footer = () => {
             <FaSpotify className='h-8 w-8 hover:text-yellowGreen' />
           </a>
         </div>
-        <div className='h-28 w-32 relative justify-self-center row-start-1 lg:col-start-3 lg:justify-self-end'>
+        <div className='flex justify-self-center row-start-1 lg:col-start-3 lg:justify-self-end py-6'>
           <Image
-            src='https://res.cloudinary.com/dloisor1x/image/upload/v1672273075/santa-ana-sk8nmeet/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm.png'
-            alt='santa ana sk8nmeet logo'
-            fill
-            style={{ objectFit: 'contain' }}
-            sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
+            smallImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705266116/assets/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm-300w_yxuxy7.webp'
+            largeImg='https://res.cloudinary.com/dzhengjen/image/upload/v1705266116/assets/logos/Sk8_n_meet-_Santa_Ana_log_text_only_white_sm-300w_yxuxy7.webp'
+            alt='sk8nmeet santana logo'
+            height='64'
+            width='140'
+            loading='lazy'
+            sizes='(max-width: 768px) 100vw, 45vw'
           />
         </div>
       </div>
