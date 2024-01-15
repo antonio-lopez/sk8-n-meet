@@ -44,10 +44,8 @@ const Footer = () => {
             alt='sk8nmeet santana logo'
             height='64'
             width='140'
-            loading='eager'
-            sizes='(max-width: 768px) 100vw,
-          (max-width: 1200px) 50vw,
-          33vw'
+            loading='lazy'
+            sizes='(max-width: 768px) 100vw, 45vw'
           />
         </div>
       </div>
