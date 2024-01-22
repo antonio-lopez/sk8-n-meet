@@ -46,7 +46,7 @@ const PastMeetUp = ({
       <PageHeader header='Past Meet Ups' />
       <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8 items-center justify-items-center mx-auto mb-16'>
         {meetups.map((meetup, indx) => (
-          <div className='flex items-center justify-center'>
+          <div key={meetup._id} className='flex items-center justify-center'>
             <FlyerPast
               _id={indx}
               key={meetup._id}
