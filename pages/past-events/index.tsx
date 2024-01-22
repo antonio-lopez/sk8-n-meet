@@ -1,12 +1,11 @@
-import { GetServerSideProps, Redirect } from 'next';
-import FlyerPast from '../../components/Cards/FlyerPast';
-import PageHeader from '../../components/View/PageHeader';
-import { IMeetup } from '../../utils/interfaces';
-import { client } from '../../utils/client';
-import { useState } from 'react';
-import Router from 'next/router';
-import { AiOutlineCaretRight, AiOutlineCaretLeft } from 'react-icons/ai';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { GetServerSideProps, Redirect } from "next";
+import FlyerPast from "../../components/Cards/FlyerPast";
+import PageHeader from "../../components/View/PageHeader";
+import { IMeetup } from "../../utils/interfaces";
+import { client } from "../../utils/client";
+import { useState } from "react";
+import Router from "next/router";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 interface serverProps {
   meetups: IMeetup[];
@@ -30,7 +29,7 @@ const PastMeetUp = ({
     e.preventDefault();
     setBtnDisabled(true);
     setPage((prev) => prev + 1);
-    Router.push({ pathname: '/past-events', query: { page: `${page + 1}` } });
+    Router.push({ pathname: "/past-events", query: { page: `${page + 1}` } });
     setBtnDisabled(false);
   };
 
@@ -38,7 +37,7 @@ const PastMeetUp = ({
     e.preventDefault();
     setBtnDisabled(true);
     setPage((prev) => prev - 1);
-    Router.push({ pathname: '/past-events', query: { page: `${page - 1}` } });
+    Router.push({ pathname: "/past-events", query: { page: `${page - 1}` } });
     setBtnDisabled(false);
   };
 
@@ -47,14 +46,16 @@ const PastMeetUp = ({
       <PageHeader header='Past Meet Ups' />
       <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8 items-center justify-items-center mx-auto mb-16'>
         {meetups.map((meetup, indx) => (
-          <FlyerPast
-            _id={indx}
-            key={meetup._id}
-            image={meetup.image}
-            title={meetup.title}
-            meetupDate={meetup.title}
-            slug={meetup.slug}
-          />
+          <div className='flex items-center justify-center'>
+            <FlyerPast
+              _id={indx}
+              key={meetup._id}
+              image={meetup.image}
+              title={meetup.title}
+              meetupDate={meetup.title}
+              slug={meetup.slug}
+            />
+          </div>
         ))}
       </div>
       <div className='flex w-full items-center justify-between space-x-9 my-10 lg:my-20 text-xl font-["Erica_One"]'>
@@ -90,11 +91,11 @@ export const getServerSideProps: GetServerSideProps<serverProps> = async (
 
   const COLLECTION_QUERY = `*[_type == "meetup"] | order(meetupDate desc)`;
 
-  if (context.resolvedUrl == '/past-events') {
+  if (context.resolvedUrl == "/past-events") {
     return {
       redirect: {
         permanent: false,
-        destination: '/past-events?page=1',
+        destination: "/past-events?page=1",
       },
     };
   }

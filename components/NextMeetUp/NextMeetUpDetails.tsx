@@ -1,14 +1,14 @@
-import Flyer from '../Cards/Flyer';
-import { IMeetup } from '../../utils/interfaces';
+import Flyer from "../Cards/Flyer";
+import { IMeetup } from "../../utils/interfaces";
 
 const NextMeetUpDetails = ({ _id, image, title, slug }: IMeetup) => {
   return (
     <section className='mb-10'>
       <div className='grid grid-cols-1 lg:grid-cols-[28rem,_1fr] place-items-center gap-y-6'>
-        <div>
+        <div className='md:w-[24rem] md:h-[24rem] w-full h-full'>
           <Flyer _id={_id} image={image} title={title} slug={slug} />
         </div>
-        <div className='w-80 md:w-full h-full'>
+        <div className='w-full h-full'>
           {/* embed google calendar */}
           <iframe
             title='google calendar for meetup events'

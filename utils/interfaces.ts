@@ -25,6 +25,8 @@ export interface ICloudinaryList {
   public_id: string;
   version?: string;
   format?: string;
+  width: string;
+  height: string;
 }
 
 export interface IHighlight {
