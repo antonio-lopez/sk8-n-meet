@@ -1,7 +1,8 @@
-import { useState, Fragment, useRef } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
-import Image from 'next/image';
-import { ICloudinaryList } from '../../utils/interfaces';
+import { useState, Fragment, useRef } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import Image from "./Image";
+
+import { ICloudinaryList } from "../../utils/interfaces";
 
 interface cloudinaryImages {
   cloudinaryList?: ICloudinaryList[];
@@ -9,7 +10,7 @@ interface cloudinaryImages {
 
 const Highlights = ({ cloudinaryList }: cloudinaryImages) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [modalImage, setModalImage] = useState('');
+  const [modalImage, setModalImage] = useState("");
   let refDiv = useRef(null);
 
   const openImageModal = (img: string) => {
@@ -19,31 +20,25 @@ const Highlights = ({ cloudinaryList }: cloudinaryImages) => {
 
   return (
     <>
-      <div className='grid grid-cols-1 justify-center sm:grid-cols-2 lg:grid-cols-3 gap-2 my-14'>
-        {cloudinaryList?.map(({ public_id, _key, version }, indx) => (
-          <div
-            key={_key}
-            className='relative h-72 hover:cursor-zoom-in'
-            onClick={() =>
-              openImageModal(
-                `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/h_720,c_scale/v${version}/${public_id}.webp`
-              )
-            }
-          >
+      <div className='grid grid-cols-2 justify-center sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 my-14'>
+        {cloudinaryList?.map(
+          ({ public_id, _key, version, height, width }, indx) => (
             <Image
-              id={_key}
-              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/w_720,c_scale/v${version}/${public_id}.webp`}
+              key={_key}
+              smallImg={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_500/v${version}/${public_id}.webp`}
+              largeImg={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_500/v${version}/${public_id}.webp`}
               alt={public_id}
-              fill
-              loading={indx < 3 ? 'eager' : 'lazy'} // loads the first 3 images and lazy loads the rest
-              style={{ objectFit: 'cover', objectPosition: 'top' }}
-              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              height={height}
+              width={width}
+              loading={indx < 3 ? "eager" : "lazy"} // loads the first 3 images and lazy loads the rest
+              className='object-cover lg:h-60 h-36 object-top'
+              sizes='(max-width: 200px) 100vw, 45vw'
             />
-          </div>
-        ))}
+          )
+        )}
 
         {/* dialog image pop-up */}
-        <Transition show={isOpen} as={Fragment}>
+        {/* <Transition show={isOpen} as={Fragment}>
           <Dialog
             as='div'
             initialFocus={refDiv}
@@ -88,7 +83,7 @@ const Highlights = ({ cloudinaryList }: cloudinaryImages) => {
               </Transition.Child>
             </div>
           </Dialog>
-        </Transition>
+        </Transition> */}
       </div>
     </>
   );
