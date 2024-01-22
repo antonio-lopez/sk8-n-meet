@@ -8,7 +8,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.13",
+    "@radix-ui/react-dialog": "^1.0.5",
     "@sanity/client": "^5.2.2",
     "@sanity/webhook": "^2.0.0",
     "next": "latest",
