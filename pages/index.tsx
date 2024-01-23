@@ -20,8 +20,8 @@ const Home = ({ meetups }: { meetups: IMeetup[] }) => {
   );
 };
 
-export const getServerSideProps = async () => {
-  const meetupQuery = `*[_type == "meetup"] | order(meetupDate desc)[0..3]`;
+export const getStaticProps = async () => {
+  const meetupQuery = `*[_type == "meetup"] | order(meetupDate desc){_id, title, image, slug} [0..3]`;
   const meetups = await client.fetch(meetupQuery);
 
   return {

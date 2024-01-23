@@ -89,7 +89,7 @@ export const getServerSideProps: GetServerSideProps<serverProps> = async (
   const pageNumber = context.query.page ? Number(context.query.page) : 1;
   const ITEMS_PER_PAGE = 8;
 
-  const COLLECTION_QUERY = `*[_type == "meetup"] | order(meetupDate desc)`;
+  const COLLECTION_QUERY = `*[_type == "meetup"] | order(meetupDate desc){_id, title, image, slug}`;
 
   if (context.resolvedUrl == "/past-events") {
     return {

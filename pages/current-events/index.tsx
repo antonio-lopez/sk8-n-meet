@@ -3,15 +3,14 @@ import { IMeetup } from "../../utils/interfaces";
 import PageHeader from "../../components/View/PageHeader";
 import NextMeetUpDetails from "../../components/NextMeetUp/NextMeetUpDetails";
 import Divider from "../../components/View/Divider";
-import Highlights from "../../components/View/Highlights";
 import HomeHighlights from "../../components/Home/HomeHighlights";
 
 interface Meetup {
-  currentMeetup: IMeetup[];
+  currentMeetup: IMeetup;
 }
 
 const NextMeetUp = ({ currentMeetup }: Meetup) => {
-  const { _id, image, title, slug } = currentMeetup[0];
+  const { _id, image, title, slug } = currentMeetup;
 
   return (
     <>
@@ -23,8 +22,8 @@ const NextMeetUp = ({ currentMeetup }: Meetup) => {
   );
 };
 
-export const getServerSideProps = async () => {
-  const meetupQuery = `*[_type == "meetup"] | order(meetupDate desc)[0..3]`;
+export const getStaticProps = async () => {
+  const meetupQuery = `*[_type == "meetup"] | order(meetupDate desc){_id, title, image, meetupDate, slug}[0]`;
   const currentMeetup = await client.fetch(meetupQuery);
 
   return {
