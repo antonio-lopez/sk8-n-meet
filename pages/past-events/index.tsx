@@ -1,4 +1,4 @@
-import { GetServerSideProps, Redirect } from "next";
+import { GetServerSideProps } from "next";
 import FlyerPast from "../../components/Cards/FlyerPast";
 import PageHeader from "../../components/View/PageHeader";
 import { IMeetup } from "../../utils/interfaces";
@@ -62,7 +62,7 @@ const PastMeetUp = ({
         <button
           type='button'
           className='flex items-end justify-center px-4 text-white disabled:opacity-50 disabled:hover:text-white hover:text-yellowGreen'
-          disabled={btnDisabled || page === 1}
+          disabled={btnDisabled || page <= 1}
           onClick={prevPage}
         >
           <IoIosArrowBack className='mr-1 h-6 w-6' />
@@ -72,7 +72,7 @@ const PastMeetUp = ({
         <button
           type='button'
           className='flex items-end justify-center px-4 text-white disabled:opacity-50 disabled:hover:text-white hover:text-yellowGreen'
-          disabled={btnDisabled || pageNumber === totalPageCount}
+          disabled={btnDisabled || pageNumber >= totalPageCount}
           onClick={nextPage}
         >
           Next
@@ -114,10 +114,25 @@ export const getServerSideProps: GetServerSideProps<serverProps> = async (
     }
   );
 
+  const MAX_PAGE_LIMIT = Math.ceil(meetupData.pagination?.totalPageCount || 1);
+
+  if (
+    Number(context.query.page) < 1 ||
+    Number(context.query.page) > MAX_PAGE_LIMIT
+  ) {
+    return {
+      redirect: {
+        permanent: false,
+        // redirect to error page
+        destination: "/_error",
+      },
+    };
+  }
+
   return {
     props: {
       meetups: meetupData.meetups,
-      totalPageCount: Math.ceil(meetupData.pagination?.totalPageCount || 1),
+      totalPageCount: MAX_PAGE_LIMIT,
       pageNumber: meetupData.pagination.pageNumber,
     },
   };
