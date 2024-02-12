@@ -1,9 +1,9 @@
-import { client } from '../../utils/client';
-import { IMeetup } from '../../utils/interfaces';
-import PageHeader from '../../components/View/PageHeader';
-import MeetUpDetails from '../../components/MeetUp/MeetUpDetails';
-import Divider from '../../components/View/Divider';
-import Highlights from '../../components/View/Highlights';
+import { client } from "../../utils/client";
+import { IMeetup } from "../../utils/interfaces";
+import PageHeader from "../../components/View/PageHeader";
+import MeetUpDetails from "../../components/MeetUp/MeetUpDetails";
+import Divider from "../../components/View/Divider";
+import Highlights from "../../components/View/Highlights";
 
 interface Meetup {
   meetup: IMeetup;
@@ -30,7 +30,14 @@ const Meetup = ({ meetup }: Meetup) => {
         body={body}
       />
       <Divider />
-      <Highlights cloudinaryList={cloudinaryList} />
+      {cloudinaryList ? (
+        <Highlights cloudinaryList={cloudinaryList} />
+      ) : (
+        <p className='text-slimSilver lg:text-lg text-center h-full py-20'>
+          At the moment, there are no photos available for this event. Please
+          revisit later for updates!
+        </p>
+      )}
     </>
   );
 };
