@@ -3,7 +3,6 @@
 # Sk8NMeet Santana
 
 > The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.
-> 
 
 ## Table of contents
 
@@ -15,7 +14,9 @@
 
 ## About The Project
 
-The goal of this project was to create a website for [Sk8NMeet Santana](https://www.instagram.com/sk8_n_meet_santana/) using their requirements. I implemented a way for the team to update the website's content using [Sanity](https://www.sanity.io/) as the content management system (CMS) for creating, editing, and deleting meetups. [Cloudinary](https://cloudinary.com/) was used for image hosting and optimization. Its plugin is used inside Sanity Studio and allows the team to choose which photos to use for a new meetup or update existing photos. 
+The goal of this project was to create a website for [Sk8NMeet Santana](https://www.instagram.com/sk8_n_meet_santana/) using their requirements. I implemented a way for the team to update the website's content using [Sanity](https://www.sanity.io/) as the content management system (CMS) for creating, editing, and deleting meetups. [Cloudinary](https://cloudinary.com/) was used for image hosting and optimization. Its plugin is used inside Sanity Studio and allows the team to choose which photos to use for a new meetup or update existing photos.
+
+> To delve deeper into my development process, feel free to visit my website for a [comprehensive explanation](https://www.antoniolopez.me/projects/sk8-n-meet-santana).
 
 ### Highlights
 
@@ -23,7 +24,7 @@ The goal of this project was to create a website for [Sk8NMeet Santana](https://
 - Sanity content management system for managing data
 - Cloudinary image optimization for improving website performance
 - Google calendar integration
-- Storybook and Figma for wireframes and prototyping 
+- Storybook and Figma for wireframes and prototyping
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
