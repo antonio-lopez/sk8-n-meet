@@ -9,5 +9,7 @@ export default {
 } as Meta<typeof React.Component>;
 
 export const Page: StoryFn<typeof React.Component> = () => (
-  <Layout {...Layout.args}>{/* <MeetUpDetails /> */}</Layout>
+  <Layout {...Layout.args}>
+    <></>
+  </Layout>
 );
