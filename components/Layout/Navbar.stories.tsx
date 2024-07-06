@@ -1,9 +1,9 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Navbar from './Navbar';
+import { StoryFn, Meta } from "@storybook/react";
+import Navbar from "./Navbar";
 
 export default {
-  title: 'Layout/Navbar',
+  title: "Layout/Navbar",
   component: Navbar,
-} as ComponentMeta<typeof Navbar>;
+} as Meta<typeof Navbar>;
 
-export const Primary: ComponentStory<typeof Navbar> = () => <Navbar />;
+export const Primary: StoryFn<typeof Navbar> = () => <Navbar />;

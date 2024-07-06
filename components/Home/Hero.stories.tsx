@@ -1,9 +1,9 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Hero from './Hero';
+import { StoryFn, Meta } from "@storybook/react";
+import Hero from "./Hero";
 
 export default {
-  title: 'Home/Hero',
+  title: "Home/Hero",
   component: Hero,
-} as ComponentMeta<typeof Hero>;
+} as Meta<typeof Hero>;
 
-export const Primary: ComponentStory<typeof Hero> = () => <Hero />;
+export const Primary: StoryFn<typeof Hero> = () => <Hero />;

@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import HomeFlyers from './HomeFlyers';
+import { StoryFn, Meta } from "@storybook/react";
+import HomeFlyers from "./HomeFlyers";
 
 export default {
-  title: 'Cards/Flyers',
+  title: "Cards/Flyers",
   component: HomeFlyers,
-} as ComponentMeta<typeof HomeFlyers>;
+} as Meta<typeof HomeFlyers>;
 
-const Template: ComponentStory<typeof HomeFlyers> = () => <></>;
+const Template: StoryFn<typeof HomeFlyers> = () => <></>;
 
 export const Primary = Template.bind({});

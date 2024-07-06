@@ -1,9 +1,9 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Divider from './Divider';
+import { StoryFn, Meta } from "@storybook/react";
+import Divider from "./Divider";
 
 export default {
-  title: 'View/Divider',
+  title: "View/Divider",
   component: Divider,
-} as ComponentMeta<typeof Divider>;
+} as Meta<typeof Divider>;
 
-export const Primary: ComponentStory<typeof Divider> = () => <Divider />;
+export const Primary: StoryFn<typeof Divider> = () => <Divider />;

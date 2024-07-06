@@ -1,13 +1,11 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import HomeHighlights from './HomeHighlights';
+import { StoryFn, Meta } from "@storybook/react";
+import HomeHighlights from "./HomeHighlights";
 
 export default {
-  title: 'Home/Highlights',
+  title: "Home/Highlights",
   component: HomeHighlights,
-} as ComponentMeta<typeof HomeHighlights>;
+} as Meta<typeof HomeHighlights>;
 
-const Template: ComponentStory<typeof HomeHighlights> = () => (
-  <HomeHighlights />
-);
+const Template: StoryFn<typeof HomeHighlights> = () => <HomeHighlights />;
 
 export const Primary = Template.bind({});

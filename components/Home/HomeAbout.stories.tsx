@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import HomeAbout from './HomeAbout';
+import { StoryFn, Meta } from "@storybook/react";
+import HomeAbout from "./HomeAbout";
 
 export default {
-  title: 'Home/About',
+  title: "Home/About",
   component: HomeAbout,
-} as ComponentMeta<typeof HomeAbout>;
+} as Meta<typeof HomeAbout>;
 
-const Template: ComponentStory<typeof HomeAbout> = () => <HomeAbout />;
+const Template: StoryFn<typeof HomeAbout> = () => <HomeAbout />;
 
 export const Primary = Template.bind({});

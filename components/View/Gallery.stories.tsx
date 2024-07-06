@@ -1,9 +1,9 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Gallery from './Gallery';
+import { StoryFn, Meta } from "@storybook/react";
+import Gallery from "./Gallery";
 
 export default {
-  title: 'View/Gallery',
+  title: "View/Gallery",
   component: Gallery,
-} as ComponentMeta<typeof Gallery>;
+} as Meta<typeof Gallery>;
 
-export const Primary: ComponentStory<typeof Gallery> = () => <Gallery />;
+export const Primary: StoryFn<typeof Gallery> = () => <Gallery />;

@@ -1,9 +1,9 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import AboutBlurb from './AboutBlurb';
+import { StoryFn, Meta } from "@storybook/react";
+import AboutBlurb from "./AboutBlurb";
 
 export default {
-  title: 'About/AboutBlurb',
+  title: "About/AboutBlurb",
   component: AboutBlurb,
-} as ComponentMeta<typeof AboutBlurb>;
+} as Meta<typeof AboutBlurb>;
 
-export const Primary: ComponentStory<typeof AboutBlurb> = () => <AboutBlurb />;
+export const Primary: StoryFn<typeof AboutBlurb> = () => <AboutBlurb />;

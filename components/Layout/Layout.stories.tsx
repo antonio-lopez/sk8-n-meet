@@ -1,11 +1,9 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Layout from './Layout';
+import { StoryFn, Meta } from "@storybook/react";
+import Layout from "./Layout";
 
 export default {
-  title: 'Layout/Layout',
+  title: "Layout/Layout",
   component: Layout,
-} as ComponentMeta<typeof Layout>;
+} as Meta<typeof Layout>;
 
-export const Primary: ComponentStory<typeof Layout> = (args) => (
-  <Layout {...args} />
-);
+export const Primary: StoryFn<typeof Layout> = (args) => <Layout {...args} />;

@@ -1,12 +1,12 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import Flyer from "./Flyer";
 
 export default {
   title: "Cards/Flyer",
   component: Flyer,
-} as ComponentMeta<typeof Flyer>;
+} as Meta<typeof Flyer>;
 
-const Template: ComponentStory<typeof Flyer> = (args) => <Flyer {...args} />;
+const Template: StoryFn<typeof Flyer> = (args) => <Flyer {...args} />;
 
 export const Primary = Template.bind({});
 

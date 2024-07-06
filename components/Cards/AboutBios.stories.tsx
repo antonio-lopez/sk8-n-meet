@@ -1,9 +1,9 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import AboutBios from './AboutBios';
+import { StoryFn, Meta } from "@storybook/react";
+import AboutBios from "./AboutBios";
 
 export default {
-  title: 'Cards/AboutBios',
+  title: "Cards/AboutBios",
   component: AboutBios,
-} as ComponentMeta<typeof AboutBios>;
+} as Meta<typeof AboutBios>;
 
-export const Primary: ComponentStory<typeof AboutBios> = () => <AboutBios />;
+export const Primary: StoryFn<typeof AboutBios> = () => <AboutBios />;
